@@ -1,0 +1,32 @@
+
+spring:
+  profiles:
+    active:
+
+sftp:
+  host: 10.17.1.106
+  port: 22
+  user: jboss
+  privateKey: #{null}
+  privateKeyPassphrase:
+  password: ftp4sm
+
+  remote:
+    directory.upload: /sedex/interface/outbox  # répertoire distant sftp upload, pas utilie en l'état --> seulement donload
+    directory.download: /home/jboss/tbo/input # répertoire distant sftp download
+    directory.download.filter: "*.*" # pattern file, xxx.xxx
+
+  local:
+    directory:
+      download: /tmp/sedex-transfert # répertoire local temporaire pour la sxnchro spring integration
+
+minio:
+  server:
+    endpoint: http://localhost:9000
+    accessKey: minioadmin
+    secretKey: minioadmin
+
+kafka:
+  bootstrapAddress: localhost:9092
+  sedex:
+    inbox-topic: sedex-inbox # topic kafka pour les notifications
