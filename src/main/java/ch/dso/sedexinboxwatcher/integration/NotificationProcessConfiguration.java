@@ -89,8 +89,10 @@ public class NotificationProcessConfiguration {
                 pushEventToKafka(nouveauFichier);
 
             } catch (InvalidBucketNameException e) {
+                log.error(e.getMessage());
                 e.printStackTrace();
             } catch (Exception e) {
+                log.error(e.getMessage());
                 e.printStackTrace();
             }
         };

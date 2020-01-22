@@ -19,7 +19,7 @@ public class MinioConfig {
     @Value("${minio.server.secretKey}")
     private String secretKey;
 
-    public final static String SEDEX_INBOX_BUCKET_NAME = "sedex-inbox2";
+    public final static String SEDEX_INBOX_BUCKET_NAME = "sedex-inbox";
 
     @Bean
     public MinioClient minioClient () throws InvalidPortException, InvalidEndpointException {
