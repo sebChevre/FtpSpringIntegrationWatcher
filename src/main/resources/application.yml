@@ -4,12 +4,12 @@ spring:
     active:
 
 sftp:
-  host: 10.17.1.106
+  host: <TCPHOSTURL>
   port: 22
-  user: jboss
+  user: <TCPHOSTUSER>
   privateKey: #{null}
   privateKeyPassphrase:
-  password: ftp4sm
+  password: <TCPHOSTPASS>
 
   remote:
     directory.upload: /sedex/interface/outbox  # répertoire distant sftp upload, pas utilie en l'état --> seulement donload
